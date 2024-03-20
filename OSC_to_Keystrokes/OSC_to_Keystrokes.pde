@@ -1,7 +1,10 @@
 // ToDos
+
 // Start with classifier algorithm
     // setup responses corrosponding to the Wekinator output, and the wishes from Simon
 // If time, also make a implementation for dynamis time warping
+// take into consideration if Wekinator streams the same output-value combination, or only sends upond changes...
+  // this will impact the way we want the generation of keystrokes to work
 
 import oscP5.*;
 import netP5.*;
@@ -48,6 +51,7 @@ void oscEvent(OscMessage theOscMessage) {
       
       println(theOscMessage.addrPattern(), theOscMessage.typetag());
       println(" values: "+firstValue+", "+secondValue+", "+thirdValue+", "+fourthValue+", "+fifthValue);
+      // call the generateKeystroke function here
       return;
     }  
   } 
